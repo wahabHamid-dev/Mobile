@@ -1,0 +1,37 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="12dp">
+
+    <TextView
+        android:id="@+id/textPayee"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Payee Name" />
+
+    <TextView
+        android:id="@+id/textAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Amount" />
+
+    <TextView
+        android:id="@+id/textChequeType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cheque Type" />
+
+    <TextView
+        android:id="@+id/textDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cheque Date" />
+
+    <TextView
+        android:id="@+id/textNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Beneficiary Num" />
+
+</LinearLayout>

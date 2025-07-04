@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.wahab.myapp.ui.login.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_loginFragment_to_dashboard"
+            app:destination="@id/dashboard" />
+        <action
+            android:id="@+id/action_loginFragment_to_signup"
+            app:destination="@id/signup" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/itemFragment"
+        android:name="com.wahab.myapp.ItemFragment"
+        android:label="fragment_item_list"
+        tools:layout="@layout/fragment_item_list">
+        <action
+            android:id="@+id/action_itemFragment_to_dashboard"
+            app:destination="@id/dashboard" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/dashboard"
+        android:name="com.wahab.myapp.Dashboard"
+        android:label="fragment_dashboard"
+        tools:layout="@layout/fragment_dashboard">
+        <action
+            android:id="@+id/action_dashboard_to_itemFragment"
+            app:destination="@id/itemFragment" />
+        <action
+            android:id="@+id/action_dashboard_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_dashboard_to_create_Cheques"
+            app:destination="@id/create_Cheques" />
+        <action
+            android:id="@+id/action_dashboard_to_addBank"
+            app:destination="@id/addBank" />
+        <action
+            android:id="@+id/action_dashboard_to_cancelCheques"
+            app:destination="@id/cancelCheques" />
+        <action
+            android:id="@+id/action_dashboard_to_itemFragment2"
+            app:destination="@id/itemFragment2" />
+        <action
+            android:id="@+id/action_dashboard_to_profile"
+            app:destination="@id/profile" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/create_Cheques"
+        android:name="com.wahab.myapp.CreateChequeFragment"
+        android:label="fragment_create__cheques"
+        tools:layout="@layout/fragment_create__cheques">
+        <action
+            android:id="@+id/action_create_Cheques_to_dashboard"
+            app:destination="@id/dashboard" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/addBank"
+        android:name="com.wahab.myapp.AddBankFragment"
+        android:label="fragment_add_bank"
+        tools:layout="@layout/fragment_add_bank">
+        <action
+            android:id="@+id/action_addBank_to_dashboard"
+            app:destination="@id/dashboard" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/cancelCheques"
+        android:name="com.wahab.myapp.ItemFragment"
+        android:label="fragment_cancel_cheques"
+        tools:layout="@layout/fragment_cancel_cheques">
+        <action
+            android:id="@+id/action_cancelCheques_to_dashboard"
+            app:destination="@id/dashboard" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/itemFragment2"
+        android:name="com.wahab.myapp.ReceivedChequesFragment"
+        android:label="fragment_item_list2"
+        tools:layout="@layout/fragment_item_list2">
+        <action
+            android:id="@+id/action_itemFragment2_to_dashboard"
+            app:destination="@id/dashboard" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/profile"
+        android:name="com.wahab.myapp.Profile"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile">
+        <action
+            android:id="@+id/action_profile_to_dashboard"
+            app:destination="@id/dashboard" />
+    </fragment>
+    <fragment
+        android:id="@+id/signup"
+        android:name="com.wahab.myapp.SignupFragment"
+        android:label="fragment_signup"
+        tools:layout="@layout/fragment_signup" >
+        <action
+            android:id="@+id/action_signup_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_signup_to_dashboard"
+            app:destination="@id/dashboard" />
+    </fragment>
+
+</navigation>

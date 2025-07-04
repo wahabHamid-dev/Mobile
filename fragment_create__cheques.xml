@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".CreateChequeFragment">
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/chequeTypeTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select Cheque Type"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="32dp"/>
+
+    <!-- Radio Group for cheque type -->
+    <RadioGroup
+        android:id="@+id/chequeTypeGroup"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/chequeTypeTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp">
+
+        <RadioButton
+            android:id="@+id/radioPayeeAccountOnly"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Payee Account Only"/>
+
+        <RadioButton
+            android:id="@+id/radioCrossedCheque"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Crossed Cheque"/>
+
+        <RadioButton
+            android:id="@+id/radioEndorsedCheque"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Endorsed Cheque"/>
+    </RadioGroup>
+
+    <!-- Beneficiary Account Number -->
+    <EditText
+        android:id="@+id/editTextNumber"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Amount"
+        android:inputType="number"
+        app:layout_constraintTop_toBottomOf="@id/chequeTypeGroup"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"/>
+
+    <!-- Beneficiary Name -->
+    <EditText
+        android:id="@+id/editTextText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Beneficiary Name"
+        android:inputType="text"
+        app:layout_constraintTop_toBottomOf="@id/editTextNumber"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="12dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"/>
+
+    <!-- Beneficiary Bank Name -->
+    <EditText
+        android:id="@+id/editTextNumber2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Beneficiary Bank Name"
+        android:inputType="text"
+        app:layout_constraintTop_toBottomOf="@id/editTextText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="12dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"/>
+
+    <!-- Beneficiary ID -->
+    <EditText
+        android:id="@+id/editTextNumber3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Beneficiary Email"
+        android:inputType="textEmailAddress"
+        app:layout_constraintTop_toBottomOf="@id/editTextNumber2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="12dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"/>
+
+    <!-- Valid Till Date -->
+    <EditText
+        android:id="@+id/editTextDate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Valid Till"
+        android:inputType="none"
+        android:focusable="false"
+        app:layout_constraintTop_toBottomOf="@id/editTextNumber3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="12dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"/>
+
+    <Button
+        android:id="@+id/submitChequeTypeButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Continue"
+        app:layout_constraintTop_toBottomOf="@id/editTextDate"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="24dp"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
